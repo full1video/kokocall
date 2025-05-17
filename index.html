@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Call & SMS History</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="assets/papaparse.min.js"></script>
+</head>
+<body>
+    <h1>আপনার কল ও এসএমএস হিস্টোরি আপলোড করুন</h1>
+    
+    <div class="upload-section">
+        <label for="callHistory">কল হিস্টোরি (CSV/TXT)</label>
+        <input type="file" id="callHistory" accept=".csv,.txt">
+        
+        <label for="smsHistory">এসএমএস হিস্টোরি (CSV/TXT)</label>
+        <input type="file" id="smsHistory" accept=".csv,.txt">
+        
+        <button onclick="processFiles()">প্রসেস করুন</button>
+    </div>
+
+    <div id="dataPreview">
+        <div id="callTable"></div>
+        <div id="smsTable"></div>
+    </div>
+
+    <button onclick="downloadTxt()" id="downloadBtn">ডাউনলোড করুন (TXT)</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
